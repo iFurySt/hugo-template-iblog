@@ -1,0 +1,20 @@
+name = 'iBlog'
+license = 'MIT'
+licenselink = 'https://github.com/iFurySt/hugo-theme-iblog/blob/main/LICENSE'
+description = 'Inspired Blogs for Life, Observation, and Growth'
+
+homepage = 'https://github.com/iFurySt/hugo-theme-iblog'
+
+demosite = 'https://github.com/iFurySt/hugo-theme-iblog'
+
+# Taxonomy terms
+tags = ['blog', 'tailwindcss', 'responsive', 'multilingual', 'dark', 'personal', 'travel']
+features = [
+  "responsive",
+  "dark mode",
+  "multilingual",
+]
+
+[author]
+name = 'Leo'
+homepage = 'https://ifuryst.com'
