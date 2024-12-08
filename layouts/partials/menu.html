@@ -1,5 +1,10 @@
 {{ with site.Menus.main }}
-{{ range . }}
-<a href="{{ .URL }}" class="font-semibold text-neutral-600 hover:text-sky-800">{{ .Name }}</a>
-{{ end }}
+  {{ range . }}
+    <a
+      href="{{ .URL }}"
+      class="font-semibold text-neutral-600 hover:text-sky-800"
+    >
+      {{ .Name }}
+    </a>
+  {{ end }}
 {{ end }}

@@ -6,9 +6,17 @@
   {{- else }}
     {{- $opts := dict "minify" true }}
     {{- with . | js.Build $opts | fingerprint }}
-      <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+      <script
+        src="{{ .RelPermalink }}"
+        integrity="{{- .Data.Integrity }}"
+        crossorigin="anonymous"
+      ></script>
     {{- end }}
   {{- end }}
 {{- end }}
 
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+></script>

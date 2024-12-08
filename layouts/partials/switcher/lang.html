@@ -1,22 +1,31 @@
 <div class="relative">
-  <button type="button"
-          class="w-6 h-6 font-semibold text-neutral-600 hover:text-sky-800"
-          @click="open = !open">
+  <button
+    type="button"
+    class="h-6 w-6 font-semibold text-neutral-600 hover:text-sky-800"
+    @click="open = !open"
+  >
     {{ partial "icon.html" "translate" }}
   </button>
 
   <!-- use x-cloak to avoid FOUC -->
-  <div x-show="open" x-cloak x-transition class="absolute -left-12 top-full z-10 bg-white shadow-lg ring-1 ring-gray-900/5 p-1 rounded-lg w-32">
+  <div
+    x-show="open"
+    x-cloak
+    x-transition
+    class="absolute -left-12 top-full z-10 w-32 rounded-lg bg-white p-1 shadow-lg ring-1 ring-gray-900/5"
+  >
     {{ range .AllTranslations }}
-    <a href="{{ .RelPermalink }}" title="{{ .Language.LanguageName }}"
-      class="flex items-center justify-center p-2 text-sm font-semibold rounded-lg w-full
-          {{ if (ne $.Language.LanguageCode .Language.LanguageCode) }}
+      <a
+        href="{{ .RelPermalink }}"
+        title="{{ .Language.LanguageName }}"
+        class="{{ if (ne $.Language.LanguageCode .Language.LanguageCode) }}
           text-neutral-600 hover:bg-gray-50 hover:text-sky-800
-          {{ else }}
+        {{ else }}
           text-sky-800 bg-sky-50
-          {{ end }}">
-      {{ .Language.LanguageName }}
-    </a>
+        {{ end }} flex w-full items-center justify-center rounded-lg p-2 text-sm font-semibold"
+      >
+        {{ .Language.LanguageName }}
+      </a>
     {{ end }}
   </div>
 </div>
