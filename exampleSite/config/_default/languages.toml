@@ -1,0 +1,13 @@
+[en]
+disabled = false
+languageCode = 'en-US'
+languageDirection = 'ltr'
+languageName = 'English'
+weight = 1
+
+[zh-cn]
+disabled = false
+languageCode = 'zh-CN'
+languageDirection = 'ltr'
+languageName = '简体中文'
+weight = 2

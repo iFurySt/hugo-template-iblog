@@ -1,2 +1,18 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<nav class="container mx-auto max-w-4xl flex items-center justify-between p-6 lg:px-8 select-none">
+  <div>
+    <a href="{{ relLangURL "" }}" class="flex items-center gap-3">
+    <img class="h-8 w-8" src="/logo.png" alt="logo">
+    <div class="font-bold">{{ site.Title }}</div>
+    </a>
+  </div>
+  <div class="lg:flex lg:gap-6" x-data="{ open: false }" @click.outside="open = false">
+    {{ partial "menu.html" . }}
+
+    {{ if (gt .Site.Home.AllTranslations.Len 1) }}
+    {{ partial "switcher/lang.html" . }}
+    {{ end }}
+  </div>
+</nav>
+
+
+

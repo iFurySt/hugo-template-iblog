@@ -1,0 +1,23 @@
+[[main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 1
+
+[[main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+weight = 2
+
+[[main]]
+identifier = "must-reads"
+name = "Must-Reads"
+url = "/must-reads/"
+weight = 3
+
+[[main]]
+identifier = "life"
+name = "Life"
+url = "/life/"
+weight = 4
